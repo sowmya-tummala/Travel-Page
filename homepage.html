@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRAVEL</title>
+    <style>
+      /*MAIN PART*/
+      div.img {
+        background-image: url(tour.jpg);
+        width: 100%;
+        background-size: cover;
+        box-shadow: 0px -80px 100px 5px white inset;
+      }
+      div.nav {
+        background-color: skyblue;
+        opacity: 0.3;
+        width: 100%;
+        height: 60px;
+        padding-left: 250px;
+        box-sizing: border-box;
+        color: black;
+      }
+      div.navc {
+        color: black;
+        float: left;
+        width: 100px;
+        text-align: center;
+        padding: 23px;
+      }
+      div.part1 {
+        padding: 150px;
+        text-align: center;
+        color: white;
+      }
+      div.head {
+        font-size: 100px;
+        font-weight: bolder;
+      }
+      .btn {
+        background-color: transparent;
+        height: 40px;
+        width: 150px;
+        border: 2px solid white;
+        border-radius: 8px;
+        color: white;
+        cursor: pointer;
+        transition: font-size 0.5s;
+      }
+      .btn:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        font-size: 20px;
+      }
+      /* MAIN PART END*/
+
+      /*ABOUT PART*/
+      div.about {
+        height: 500px;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0px 10px 100px 5px skyblue inset;
+        padding: 100px;
+        box-sizing: border-box;
+        text-align: center;
+        color: skyblue;
+      }
+      div.b1 {
+        height: 200px;
+        padding: 50px;
+        float: left;
+        width: 440px;
+      }
+      div.b2 {
+        height: 200px;
+        padding: 50px;
+        float: right;
+        width: 440px;
+      }
+      div.c1 {
+        height: 80px;
+        float: left;
+        width: 80px;
+        border: 2px solid skyblue;
+        border-radius: 50%;
+        background-image: url(data:image/png;base64,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);
+        background-size: cover;
+      }
+      div.c2 {
+        height: 80px;
+        float: left;
+        width: 80px;
+        border: 2px solid skyblue;
+        border-radius: 50%;
+        background-size: cover;
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDXMeFt2p12gszvyd1c5dao1NF18mGwdgONA&usqp=CAU);
+      }
+      /*ABOUT PART END*/
+      /*PHOTOS PART*/
+      div.photos {
+        background: rgb(127, 236, 143);
+        background: linear-gradient(
+          45deg,
+          rgba(127, 236, 143, 1) 0%,
+          rgba(254, 253, 253, 1) 100%
+        );
+        width: 100%;
+        height: 600px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 50px;
+        box-sizing: border-box;
+      }
+      div.item1 {
+        background-image: url(https://images.unsplash.com/photo-1616249140849-affc0f141c7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGhpbWFsYXlhc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+      }
+      div.item3 {
+        background-image: url(https://images.unsplash.com/photo-1582137363701-90dfd38fe801?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8d2F0ZXJmYWxsc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+      }
+      div.item5 {
+        background-image: url(https://media.istockphoto.com/photos/white-mounatins-picture-id89891375?b=1&k=20&m=89891375&s=170667a&w=0&h=Ij66iUAtNqL_dld_t3-JaTVHtrj_YVedunfeJ9FsXrw=);
+      }
+      div.item2,
+      div.item4,
+      div.item6 {
+        background-color: white;
+
+        box-sizing: border-box;
+        padding: 38px;
+      }
+      div.hgrid {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        font-size: 50px;
+        text-align: center;
+        color: green;
+        margin-bottom: 10px;
+      }
+      /*PHOTOS PART END*/
+      /*FOOTER PART*/
+      div.footer {
+        background-image: url(greenary.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 500px;
+        color: white;
+      }
+      div.box1 {
+        height: 400px;
+        padding: 50px;
+        float: left;
+        width: 500px;
+      }
+      div.box2 {
+        height: 400px;
+        float: right;
+        padding: 50px;
+        width: 500px;
+      }
+      .input {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid white;
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+      }
+      ::placeholder {
+        color: white;
+      }
+      div.heading {
+        font-size: 30px;
+        margin-bottom: 12px;
+        margin-top: 12px;
+      }
+      /*FOOTER PART END*/
+    </style>
+  </head>
+  <body>
+    <!--MAIN PART-->
+    <div class="img">
+      <div class="nav">
+        <a href="homepage.html"><div class="navc">HOME</div></a>
+        <a href="homepage.html"><div class="navc">TOUR</div></a>
+        <a href="homepage.html"><div class="navc">GALLERY</div></a>
+        <a href="homepage.html"><div class="navc">BLOGS</div></a>
+        <a href="homepage.html"><div class="navc">CONTACT US</div></a>
+      </div>
+      <div class="part1">
+        <div class="head">TRAVEL</div>
+        <br />
+        <div>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis natus
+          minus molestias sapiente quaerat eos iure rerum expedita ipsam!
+          Cupiditate eum dolores sapiente in natus rem, molestiae ea iste
+          consequatur!
+        </div>
+        <br /><br />
+        <a href="homepage.html"><button class="btn">JOIN US</button></a>
+      </div>
+    </div>
+    <!--MAIN PART END-->
+    <!--ABOUT PART-->
+    <div class="about">
+      <div class="heading">About Travel</div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit id cum
+        obcaecati dolore velit culpa fuga sunt temporibus, ut hic doloremque nam
+        voluptate nobis voluptatum, natus quasi aspernatur placeat error!
+      </div>
+      <div class="b1">
+        <div class="c1"></div>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem ex quam
+          assumenda, reprehenderit velit possimus voluptatum recusandae vel
+          totam hic. Quod dolor fugit temporibus hic inventore provident,
+          voluptatum voluptatem dolorum!
+        </div>
+      </div>
+      <div class="b2">
+        <div class="c2"></div>
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+          quisquam voluptates ipsa, nemo nam expedita perspiciatis officiis,
+          aliquam repudiandae excepturi doloremque perferendis at repellendus!
+          Quae fugiat est sit consectetur et.
+        </div>
+      </div>
+    </div>
+    <!--ABOUT PART END-->
+
+    <!--PHOTOS PART-->
+    <div class="photos">
+      <div class="hgrid">NATURE</div>
+      <div class="item1"></div>
+      <div class="item2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa expedita
+        sequi quasi assumenda eaque recusandae quisquam fugiat illo at
+        consequatur modi dolore, accusamus nesciunt soluta incidunt numquam ipsa
+        quos adipisci!
+      </div>
+      <div class="item3"></div>
+      <div class="item4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, eius
+        aspernatur nobis totam quisquam earum quidem odit, illum, corporis
+        reprehenderit quo repudiandae soluta. A inventore vel blanditiis earum
+        possimus explicabo.
+      </div>
+      <div class="item5"></div>
+      <div class="item6">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero aliquid
+        dolorem dolore numquam et consequatur alias qui doloremque impedit
+        asperiores dolores optio, minima eligendi facere eum exercitationem ea.
+        Debitis, cupiditate.
+      </div>
+    </div>
+    <!--PHOTOS PART END-->
+
+    <!--FOOTER PART-->
+    <div class="footer">
+      <!--left part-->
+      <div class="box1">
+        <div class="heading">Why you choose us?</div>
+        <div>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+          doloremque amet soluta fugiat corrupti? Saepe accusamus, fugit
+          assumenda repellendus aliquam dignissimos ea corrupti natus laborum,
+          similique dolorem a eius velit.
+        </div>
+        <div class="heading">Get Started</div>
+        <div>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab, ducimus
+          quo! Libero voluptatibus maxime aperiam totam laborum dolorum illo
+          maiores ex esse quidem sapiente, quaerat, illum earum explicabo porro
+          exercitationem!
+        </div>
+        <div>
+          <ul>
+            <li>Address : 10-90-32, xxx street, India</li>
+            <li>Phone no : +91 2345678910</li>
+            <li>Email : tour15@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <!--left part end-->
+
+      <!--right part-->
+      <div class="box2">
+        <input type="text" placeholder="Name" class="input" />
+        <input type="email" placeholder="Email" class="input" />
+        <input type="text" placeholder="Subject" class="input" />
+        <textarea placeholder="Message" class="input"></textarea>
+        <br /><br /><br />
+        <a href="homepage.html"
+          ><button class="btn" style="float: right">Send</button></a
+        ><br /><br /><br /><br /><br /><br /><br />
+        <div style="float: right">copyrights &copy; 2022 sowmya tummala</div>
+      </div>
+      <!--right part end-->
+    </div>
+    <!--FOOTER PART END-->
+  </body>
+</html>
